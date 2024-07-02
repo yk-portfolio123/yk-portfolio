@@ -5,15 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 const awsmobile = {
-  "aws_project_region": "us-east-2",
-  "aws_appsync_graphqlEndpoint": "https://f25dqe5bfbebvbrjk4s2z4t2vq.appsync-api.us-east-2.amazonaws.com/graphql",
-  "aws_appsync_region": "us-east-2",
-  "aws_appsync_authenticationType": "API_KEY",
-  "aws_appsync_apiKey": "da2-d345vgiicvevfbwofnx2wevn2y",
-  "aws_cognito_identity_pool_id": "us-east-2:8342c5ad-406a-4283-b898-07575618863b",
-  "aws_cognito_region": "us-east-2",
-  "aws_user_pools_id": "us-east-2_UOUBESCmm",
-  "aws_user_pools_web_client_id": "4rdsv46b2vl4pkstsstjuiaijl",
+  "aws_project_region": process.env.PROJECT_REGION,
+  "aws_appsync_graphqlEndpoint": process.env.APPSYNC_GRAPHQLENDPOINT,
+  "aws_appsync_region": process.env.APPSYNC_REGION,
+  "aws_appsync_authenticationType": process.env.APPSYNC_AUTHENTICATIONTYPE,
+  "aws_appsync_apiKey": process.env.APPSYNC_APIKEY,
+  "aws_cognito_identity_pool_id": process.env.COGNITO_IDENTITY_POOL_ID,
+  "aws_cognito_region": process.env.COGNITO_REGION,
+  "aws_user_pools_id": process.env.USER_POOLS_ID,
+  "aws_user_pools_web_client_id": process.env.USER_POOLS_WEB_CLIENT_ID,
   "oauth": {},
   "aws_cognito_username_attributes": [],
   "aws_cognito_social_providers": [],
@@ -31,8 +31,8 @@ const awsmobile = {
   "aws_cognito_verification_mechanisms": [
       "EMAIL"
   ],
-  "aws_user_files_s3_bucket": "amplify-ykportfolio-ykenvelop-e7c83-deploymente7c83-ykenvelop",
-  "aws_user_files_s3_bucket_region": "us-east-2"
+  "aws_user_files_s3_bucket": process.env.USER_FILES_S3_BUCKET,
+  "aws_user_files_s3_bucket_region": process.env.USER_FILES_S3_BUCKET_REGION,
 };
 Amplify.configure(awsmobile);
 
